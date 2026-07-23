@@ -70,9 +70,7 @@
     \fontspec[Path=fonts/raleway/]{Raleway-Medium}%
     \fontsize{10.5pt}{13pt}\selectfont #3\par
   }
-  \vspace{6pt}
-  \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
-  \vspace{4pt}
+  \vspace{8pt}
 }
 
 % Section headings
@@ -82,7 +80,7 @@
   \fontspec[Path=fonts/lato/]{Lato-Bol}%
   \fontsize{13pt}{16pt}\selectfont
   \raggedright\uppercase
-}{}{0em}{}[\vspace{2pt}{\color{headings}\titlerule[0.4pt]}\vspace{2pt}]
+}{}{0em}{}
 
 \titlespacing*{\section}{0pt}{8pt}{4pt}
 
@@ -96,11 +94,23 @@
 \titlespacing{\subsection}{0pt}{4pt}{2pt}
 \titlespacing{\subsubsection}{0pt}{3pt}{1pt}
 
+% Skills subsections with a little extra breathing room
+\newif\ifskillfirst
+\skillfirsttrue
+\newcommand{\skillsubsection}[1]{%
+  \ifskillfirst
+    \skillfirstfalse
+  \else
+    \vspace{3.5pt}%
+  \fi
+  \subsection{#1}%
+}
+
 % Generic run-in heading (Summary, etc.)
 \newcommand{\runsubsection}[1]{%
   {\color{subheadings}%
   \fontspec[Path=fonts/lato/]{Lato-Bol}%
-  \fontsize{10.5pt}{13pt}\selectfont\bfseries #1}%
+  \fontsize{10.5pt}{13pt}\selectfont\bfseries #1\par}%
 }
 
 % Company name — dark blue, linked when wrapped in \href
@@ -110,7 +120,16 @@
   \fontsize{11pt}{14pt}\selectfont #1}%
 }
 
-% Role | dates | location line
+% Company | role | dates | location (single header line)
+\newcommand{\companyheader}[5]{%
+  \href{#1}{\companyname{#2}} \textbar{} %
+  {\color{muted}%
+  \fontspec[Path=fonts/raleway/]{Raleway-Medium}%
+  \fontsize{9.5pt}{12pt}\selectfont
+  #3 \textbar{} #4 \textbar{} #5\par}%
+}
+
+% Role | dates | location line (standalone)
 \newcommand{\roleline}[3]{%
   {\color{muted}%
   \fontspec[Path=fonts/raleway/]{Raleway-Medium}%
@@ -137,6 +156,7 @@
 % Vertical rhythm helpers
 \newcommand{\sectionsep}{\vspace{5pt}}
 \newcommand{\entrysep}{\vspace{6pt}}
+\newcommand{\leftsectionbreak}{\vspace{8.5pt}}
 
 % Compact bullet lists with readable line spacing
 \newenvironment{tightemize}{%
