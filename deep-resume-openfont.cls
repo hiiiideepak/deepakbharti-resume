@@ -16,6 +16,7 @@
 \usepackage[UKenglish]{isodate}
 \usepackage{fontspec,xltxtra,xunicode}
 \usepackage{enumitem}
+\usepackage{graphicx}
 
 % Color palette
 \definecolor{date}{HTML}{666666}
@@ -137,6 +138,15 @@
   \fontspec[Path=fonts/raleway/]{Raleway-Medium}%
   \fontsize{9.5pt}{12pt}\selectfont
   #3 \textbar{} #4 \textbar{} #5\par}%
+}
+
+% Company header with logo
+\newcommand{\companyheaderlogo}[6]{%
+  \includegraphics[height=0.35cm]{#1} \href{#2}{\companyname{#3}} \textbar{} %
+  {\color{muted}%
+  \fontspec[Path=fonts/raleway/]{Raleway-Medium}%
+  \fontsize{9.5pt}{12pt}\selectfont
+  #4 \textbar{} #5 \textbar{} #6\par}%
 }
 
 % Role | dates | location line (standalone)
