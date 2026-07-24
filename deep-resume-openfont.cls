@@ -24,6 +24,8 @@
 \definecolor{subheadings}{HTML}{333333}
 \definecolor{company}{HTML}{1B3A5C}
 \definecolor{muted}{HTML}{777777}
+\definecolor{skyblue}{HTML}{87CEEB}
+\definecolor{gold}{HTML}{FFD700}
 
 % Typography
 \defaultfontfeatures{Mapping=tex-text,Ligatures=TeX}
@@ -32,6 +34,14 @@
 
 \newcommand{\custombold}[1]{%
   {\color{subheadings}\fontspec[Path=fonts/lato/]{Lato-Bol}\selectfont #1}%
+}
+
+\newcommand{\boxedlink}[2]{%
+  \fcolorbox{skyblue}{white}{\href{#1}{#2}}%
+}
+
+\newcommand{\boxedlinkbold}[2]{%
+  \fcolorbox{skyblue}{white}{{\bfseries\href{#1}{#2}}}%
 }
 
 \setlength{\parindent}{0pt}
@@ -147,6 +157,14 @@
 
 \newcommand{\location}[1]{%
   \color{muted}%
+  \raggedright
+  \fontspec[Path=fonts/raleway/]{Raleway-Medium}%
+  \fontsize{9.5pt}{12pt}\selectfont
+  {#1\par}%
+}
+
+\newcommand{\locationnormal}[1]{%
+  \color{primary}%
   \raggedright
   \fontspec[Path=fonts/raleway/]{Raleway-Medium}%
   \fontsize{9.5pt}{12pt}\selectfont
