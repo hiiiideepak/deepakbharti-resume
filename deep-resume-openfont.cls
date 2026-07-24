@@ -131,6 +131,12 @@
   \fontsize{11pt}{14pt}\selectfont #1}%
 }
 
+% Project name — bold styling
+\newcommand{\projectname}[1]{%
+  {\fontspec[Path=fonts/lato/]{Lato-Bol}%
+  \fontsize{10pt}{12pt}\selectfont #1}%
+}
+
 % Company | role | dates | location (single header line)
 \newcommand{\companyheader}[5]{%
   \href{#1}{\companyname{#2}} \textbar{} %
