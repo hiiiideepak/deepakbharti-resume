@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.22)  23 JUL 2026 15:20
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.22)  23 JUL 2026 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -634,7 +634,7 @@ ge=dflt;+smcp;mapping=tex-text;"
 
 
 LaTeX Font Warning: Font shape `TU/Lato-Reg(0)/m/sc' undefined
-(Font)              using `TU/Lato-Reg(0)/m/n' instead on input line 20.
+(Font)              using `TU/Lato-Reg(0)/m/n' instead on input line 22.
 
 
 Package fontspec Info: 
@@ -651,11 +651,31 @@ apping=tex-text;"
 
 
 LaTeX Font Warning: Font shape `TU/Lato-Bol(0)/m/sc' undefined
-(Font)              using `TU/Lato-Bol(0)/m/n' instead on input line 20.
+(Font)              using `TU/Lato-Bol(0)/m/n' instead on input line 22.
 
 
 LaTeX Font Warning: Font shape `TU/Lato-Bol(0)/b/n' undefined
-(Font)              using `TU/Lato-Bol(0)/m/n' instead on input line 22.
+(Font)              using `TU/Lato-Bol(0)/m/n' instead on input line 24.
+
+! Misplaced alignment tab character &.
+<argument> Data &
+                  Integrations
+l.29 \skillsubsection{Data & Integrations}
+                                          
+? 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `alignment tab' on input line 29.
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 31--31
+[]\TU/Lato-Reg(0)/m/sc/10 ETL/data pipeline design • Third-party
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\TU/Lato-Reg(0)/m/sc/10 data ingestion/normalization (Master-
+ []
 
 [1
 
@@ -669,15 +689,15 @@ L3 programming layer <2026-01-19>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `deep_resume-openfont.out' has not changed.
-(rerunfilecheck)             Checksum: 9F743D038D7DF4F7B354AB037C9F8DD0;1159.
+(rerunfilecheck)             Checksum: 82F8005DE0FFBC64837C06C1032415B9;1303.
  ) 
 Here is how much of TeX's memory you used:
  16946 strings out of 468168
  318274 string characters out of 5432815
- 800873 words of memory out of 5000000
+ 809028 words of memory out of 5000000
  45466 multiletter control sequences out of 15000+600000
  628417 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,5n,130p,430b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,5n,130p,430b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on deep_resume-openfont.pdf (1 page).
