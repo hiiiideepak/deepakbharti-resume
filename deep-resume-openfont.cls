@@ -42,7 +42,7 @@
 }
 
 \newcommand{\boxedlinkbold}[2]{%
-  \fcolorbox{skyblue}{white}{{\bfseries\href{#1}{#2}}}%
+  \fcolorbox{skyblue}{white}{{\fontspec[Path=fonts/lato/]{Lato-Bol}\href{#1}{#2}}}%
 }
 
 \setlength{\parindent}{0pt}
