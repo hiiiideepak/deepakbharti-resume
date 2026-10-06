@@ -205,7 +205,13 @@
   \end{itemize}%
 }
 
-% Skill line helper
+% Skill line helper. Infinite right-skip absorbs leftover width after a wrap
+% (no underfull box); high \linepenalty keeps TeX from wrapping earlier than needed.
 \newcommand{\skillline}[1]{%
-  {\fontsize{10pt}{13pt}\selectfont #1\par}%
+  {%
+    \rightskip=0pt plus 1fil
+    \linepenalty=1000
+    \fontsize{10pt}{13pt}\selectfont
+    #1\par
+  }%
 }
