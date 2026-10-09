@@ -95,6 +95,18 @@
 
 \titlespacing*{\section}{0pt}{8pt}{4pt}
 
+% Section heading with a leading logo, matching company-row icon size
+\newcommand{\sectionwithlogo}[2]{%
+  \par\vspace{8pt}%
+  {\color{headings}%
+  \fontspec[Path=fonts/lato/]{Lato-Bol}%
+  \fontsize{13pt}{16pt}\selectfont
+  \raisebox{-0.06em}{\includegraphics[height=0.35cm]{#1}}%
+  \hspace{5pt}%
+  \MakeUppercase{#2}\par}%
+  \vspace{4pt}%
+}
+
 \titleformat{\subsection}{%
   \color{subheadings}%
   \fontspec[Path=fonts/lato/]{Lato-Bol}%
